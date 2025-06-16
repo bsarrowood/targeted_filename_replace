@@ -123,5 +123,9 @@ def replace_in_filenames(folder_path, text_to_find, replacement_text, recursive=
 
 if __name__ == "__main__":
     
+    if add_as_header and injection:
+        print("\nWarning: Both add_as_header and injection are set as True. Please only set one to True at a time")
+        exit
+
     # Run the replacement function
     replace_in_filenames(folder_path, text_to_find, replacement_text, recursive, add_as_header, injection)
