@@ -27,14 +27,22 @@ A powerful Python script for batch renaming files with multiple operation modes,
 
 ## Usage
 
+### Operation Modes
+| Mode              | `text_to_find` Used | `replacement_text` Action        | Example Command |
+|-------------------|---------------------|----------------------------------|----------------|
+| Standard Replace  | Yes                 | Replaces matched text            | `text_to_find = "old"; replacement_text = "new"` |
+| Header Addition   | No                  | Prepends to all filenames        | `add_as_header = True; replacement_text = "[Prefix] "` |
+| Text Injection    | As length reference | Injects after X characters       | `injection = True; text_to_find = "12345"; replacement_text = "-"` |
+
 ### Basic Configuration
 ```python
 # Required
 folder_path = r"C:\Media\TV Shows\Arrow"  # Raw string for Windows paths
-text_to_find = "Arrow.S01E"               # Text to find/replace
-replacement_text = "Arrow - s01e"         # Replacement text
+text_to_find = "Arrow.S0"                 # Text to find/replace
+replacement_text = "Arrow - s0"           # Replacement text
 
 # Options
-recursive = False       # Process subfolders (True/False)
+recursive = True        # Process subfolders (True/False)
 add_as_header = False   # Add as prefix instead of replacing
 injection = False       # Inject at calculated position
+
