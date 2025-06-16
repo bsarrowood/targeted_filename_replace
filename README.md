@@ -1,15 +1,40 @@
+# Targeted Filename Replacement Tool
 
-This Python script was made to more effienctly batch rename files from those with a fairly repeat naming schemes into something more desired and structured.
-It has the capabilitiy to find specific text within the file name to replace with a different set string, add text to the beginning of file names, and
-inject text at set a character count within file names. It also has the ability to do this for a single folder path or use recursive to search all sub-folders for file names to rename.
+![Python Version](https://img.shields.io/badge/python-3.6+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-This Python script has 6 main variables:
-  * folder_path = Set the path to the folder or parent folder
-  * text_to_find = Set the text that the script will search for in the file names
-  * replacement_text = Set what you want to replace the found text above
-  * recursive = Set False if you only want the script to search the target folder or True if you want it to search all sub-folders
-  * add_as_header = Set to True and the text_to_find is ignored while the replacement_text as added to the beginning of every file
-  * injection = Set to True and the script will do a character count from the text_to_find string and inject the replacement_text after that many characters in the file names
+A powerful Python script for batch renaming files with multiple operation modes, designed specifically for media server preparation and file organization.
 
-The add_as_header and injection modifiers can be individually run with the recursive variable, but I've put a safety stop if both add_as_header and injection are set to True.
-Lastly, when recursive is set to True, if there are more than 0 files found to be renamed, the script prompts for a confirmation before applying the name changes. I did it this way since batch renaming in a single folder you're less likely to mess up if you're looking at the files within that folder, but with recursive you're likely going to be changing dozens if not hundreds of file names. Either way, the script outputs in the terminal what the original and changed file name will become with a total count.
+## Features
+
+- **Three Renaming Modes**:
+  - 🔄 Standard text replacement
+  - 🔝 Prefix addition (header)
+  - ⏸️ Precise text injection at calculated positions
+- **Safety First**:
+  - 👁️ Preview all changes before execution
+  - ❌ Conflict prevention for incompatible modes
+  - ✔️ Confirmation prompt for recursive operations
+- **Flexible Processing**:
+  - 📂 Single folder or recursive subfolder operation
+  - 💻 Cross-platform (Windows/macOS/Linux)
+
+## Installation
+
+1. Ensure Python 3.6+ is installed
+2. Download `targeted_filename_replace.py`
+3. Run directly: `python targeted_filename_replace.py`
+
+## Usage
+
+### Basic Configuration
+```python
+# Required
+folder_path = r"C:\Media\TV Shows\Arrow"  # Raw string for Windows paths
+text_to_find = "Arrow.S01E"               # Text to find/replace
+replacement_text = "Arrow - s01e"         # Replacement text
+
+# Options
+recursive = False       # Process subfolders (True/False)
+add_as_header = False   # Add as prefix instead of replacing
+injection = False       # Inject at calculated position
