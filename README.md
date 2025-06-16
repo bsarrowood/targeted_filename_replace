@@ -1,8 +1,7 @@
 
 This Python script was made to more effienctly batch rename files from those with a fairly repeat naming schemes into something more desired and structured.
 It has the capabilitiy to find specific text within the file name to replace with a different set string, add text to the beginning of file names, and
-inject text at set a character count within file names. It also has the ability to do this for a single folder path or use recursive to search all sub-
-folders for file names to rename.
+inject text at set a character count within file names. It also has the ability to do this for a single folder path or use recursive to search all sub-folders for file names to rename.
 
 This Python script has 6 main variables:
   * folder_path = Set the path to the folder or parent folder
