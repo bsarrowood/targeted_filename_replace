@@ -5,11 +5,11 @@ inject text at set a character count within file names. It also has the ability 
 folders for file names to rename.
 
 This Python script has 6 main variables:
-  folder_path = Set the path to the folder or parent folder
-  text_to_find = Set the text that the script will search for in the file names
-  replacement_text = Set what you want to replace the found text above
-  recursive = Set False if you only want the script to search the target folder or True if you want it to search all sub-folders
-  add_as_header = Set to True and the text_to_find is ignored while the replacement_text as added to the beginning of every file
-  injection = Set to True and the script will do a character count from the text_to_find string and inject the replacement_text after that many characters in the file names
+  * folder_path = Set the path to the folder or parent folder
+  * text_to_find = Set the text that the script will search for in the file names
+  * replacement_text = Set what you want to replace the found text above
+  * recursive = Set False if you only want the script to search the target folder or True if you want it to search all sub-folders
+  * add_as_header = Set to True and the text_to_find is ignored while the replacement_text as added to the beginning of every file
+  * injection = Set to True and the script will do a character count from the text_to_find string and inject the replacement_text after that many characters in the file names
 
 The add_as_header and injection modifiers can be individually run with the recursive variable, but I've put a safety stop if both add_as_header and injection are set to True.
