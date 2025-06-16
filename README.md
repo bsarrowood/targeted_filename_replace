@@ -12,3 +12,4 @@ This Python script has 6 main variables:
   * injection = Set to True and the script will do a character count from the text_to_find string and inject the replacement_text after that many characters in the file names
 
 The add_as_header and injection modifiers can be individually run with the recursive variable, but I've put a safety stop if both add_as_header and injection are set to True.
+Lastly, when recursive is set to True, if there are more than 0 files found to be renamed, the script prompts for a confirmation before applying the name changes. I did it this way since batch renaming in a single folder you're less likely to mess up if you're looking at the files within that folder, but with recursive you're likely going to be changing dozens if not hundreds of file names. Either way, the script outputs in the terminal what the original and changed file name will become with a total count.
